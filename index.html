@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/style.css">
+  <script src="js/config.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
         <i class="burger-icon"></i>
       </div>
       <div class="menu-items">
-        <div class="sub-menu">
+        <!--<div class="sub-menu">
           <a class=" menu-item" href="#">Каталог</a>
           <div class="sub-menu_items">
             <a class=" sub-menu_item" href="#">VOIP оборудование</a>
@@ -58,7 +59,7 @@
         </div>
         <a class="menu-item" href="#">Решения</a>
         <a class="menu-item" href="#">Техподдержка</a>
-        <a class="menu-item" href="#">Контакти</a>
+        <a class="menu-item" href="#">Контакти</a>-->
       </div>
     </div>
   </nav>
@@ -115,13 +116,11 @@
           <div class="basket">
             <a href="#">
               <img src="images/basket-icon.svg" alt="basket icon">
-              <span class="basket-goods-counter">
-              10
-            </span>
+              <span class="basket-goods-counter"></span>
               <p class="basket__info">
                 <strong>Корзина</strong>
                 <br>
-                4 / 4 000р.
+                <span class="basket-counter"></span> / <span class="basket-sum"></span>
               </p>
             </a>
           </div>
@@ -179,9 +178,9 @@
           Новости компании
         </p>
         <ul class="news-list">
-          <li class="news-preview">
+          <!--<li class="news-preview">
             <a href="#">
-              <img class="news-img" src="images/news-icon-1.png" alt="news icon">
+              <img class="news-img" src="images/nlews-icon-1.png" onerror="this.src='images/bg-image.png'" alt="news icon">
               <div class="news-date">
                 <p class="date-num">29</p>
                 <p>октября</p>
@@ -229,7 +228,7 @@
                 Уже скоро в продаже!
               </p>
             </div>
-          </li>
+          </li>-->
         </ul>
         <a class="all-news-link" href="#">Все новости</a>
       </div>
@@ -1194,5 +1193,7 @@
     </div>
   </div>
 </div>
+
+<script src="js/index.js"></script>
 </body>
 </html>

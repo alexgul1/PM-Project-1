@@ -47,6 +47,85 @@ const TOP_MENU = {
         order: 3,
         title: 'Payment and delivery',
         url: 'payment_delivery.html',
+    },
+    cata1log: {
+        order: 1,
+        title: 'Каталог',
+        submenu: [
+            {
+                order: 1,
+                title: 'VOIP оборудование',
+                url: 'voip_equipment.html',
+            },
+            {
+                order: 2,
+                title: 'GSM оборудование',
+                url: 'gsm_equipment.html',
+            }
+        ]
+    },
+    abou1t_company: {
+        order: 2,
+        title: 'О компании',
+        submenu: [
+            {
+                order: 1,
+                title: 'VOIP оборудование',
+                url: 'voip_equipment.html',
+            },
+            {
+                order: 2,
+                title: 'GSM оборудование',
+                url: 'gsm_equipment.html',
+            }
+        ]
+    },
+    paym2ent_delivery: {
+        order: 3,
+        title: 'Payment and delivery',
+        url: 'payment_delivery.html',
+    },
+    cat3alog: {
+        order: 1,
+        title: 'Каталог',
+        submenu: [
+            {
+                order: 1,
+                title: 'VOIP оборудование',
+                url: 'voip_equipment.html',
+            },
+            {
+                order: 2,
+                title: 'GSM оборудование',
+                url: 'gsm_equipment.html',
+            }
+        ]
+    },
+    ab4out_company: {
+        order: 2,
+        title: 'О компании',
+        submenu: [
+            {
+                order: 1,
+                title: 'VOIP оборудование',
+                url: 'voip_equipment.html',
+            },
+            {
+                order: 2,
+                title: 'GSM оборудование',
+                url: 'gsm_equipment.html',
+            }
+        ]
+    },
+    paym5ent_delivery: {
+        order: 3,
+        title: 'Payment and delivery',
+        url: 'payment_delivery.html',
+    },
+    paysm5ent_delivery: {
+        order: 3,
+        title: 'Payment and delivery',
+        url: 'payment_delivery.html',
     }
 };
 
@@ -94,6 +173,26 @@ const NEWS = [
         description: 'Уже скоро в продаже!',
         img: 'https://same_url.jpg',
         url: 'voip_equipment.html',
+    },{
+        date: '2021/01/01',
+        title: 'Новинка от «Элтекс» - точка доступа WEP',
+        description: 'Предприятие «Элтекс» запустило производство точки доступа WEP-2ac.',
+        img: 'https://same_url.jpg',
+        url: 'voip_equipment.html',
+    },
+    {
+        date: '2020/12/25',
+        title: 'Новинка от компании Grandstream!',
+        description: 'Скоро в продаже мощный маршрутизатор GWN7000!',
+        img: 'https://same_url.jpg',
+        url: 'voip_equipment.html',
+    },
+    {
+        date: '2021/01/14',
+        title: 'WiFi точка доступа от компании Grandstream!',
+        description: 'Уже скоро в продаже!',
+        img: 'https://same_url.jpg',
+        url: 'voip_equipment.html',
     },
 ];
 
@@ -119,6 +218,25 @@ const ITEMS = [
         price: '1000',
         oldPrice: '1100',
         currency: 'UAH',
+        date: '2022/01/01',
+        url: 'new_items/item1.html'
+    },
+    {
+        type: 'new',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        price: '1000',
+        currency: 'USD',
+        date: '2020/12/25',
+        url: 'new_items/item1.html'
+    },
+    {
+        type: 'new',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        price: '1000',
+        oldPrice: '11000',
+        currency: 'UAH',
         date: '2021/01/01',
         url: 'new_items/item1.html'
     },
@@ -133,6 +251,24 @@ const ITEMS = [
         url: 'new_items/item.html'
     },
     {
+        type: 'recommended',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        price: '1000',
+        currency: 'USD',
+        date: '2020/12/25',
+        url: 'new_items/item1.html'
+    },
+    {
+        type: 'recommended',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        oldPrice: '1100',
+        currency: 'UAH',
+        date: '2021/01/01',
+        url: 'new_items/item1.html'
+    },
+    {
         type: 'sale',
         description: 'IP телефон Siemens Gigaset C530A IP',
         img: 'https://same_url.jpg',
@@ -142,11 +278,102 @@ const ITEMS = [
         date: '2021/01/13',
         url: 'https://same_url/item.html'
     },
+    {
+        type: 'sale',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        price: '1000',
+        currency: 'USD',
+        date: '2020/12/25',
+        url: 'new_items/item1.html'
+    },
+    {
+        type: 'sale',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        price: '1000',
+        oldPrice: '1100',
+        currency: 'UAH',
+        date: '2021/01/01',
+        url: 'new_items/item1.html'
+    }
 ];
 
 // time_action format: "d" - day, "h" - hour, "m" - minute. if doesn't exist = infinity
 const PROMOTIONS = [
     {
+        title: 'Название акции',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+        time_action: '1d 2h 20m'
+    },
+    {
+        title: 'Название акции 2',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+    },{
+        title: 'Название акции',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+        time_action: '1d 2h 20m'
+    },
+    {
+        title: 'Название акции 2',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+    },{
+        title: 'Название акции',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+        time_action: '1d 2h 20m'
+    },
+    {
+        title: 'Название акции 2',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+    },{
+        title: 'Название акции',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+        time_action: '1d 2h 20m'
+    },
+    {
+        title: 'Название акции 2',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+    },{
+        title: 'Название акции',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+        time_action: '1d 2h 20m'
+    },
+    {
+        title: 'Название акции 2',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+    },{
+        title: 'Название акции',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+        time_action: '1d 2h 20m'
+    },
+    {
+        title: 'Название акции 2',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+    },{
         title: 'Название акции',
         description: 'IP телефон Siemens Gigaset C530A IP',
         img: 'https://same_url.jpg',
@@ -172,4 +399,10 @@ const BUYING_RIGHT_NOW = [
         img: 'https://same_url.jpg',
         url: 'https://same_url/item.html',
     },
+    {
+        title: 'Название товара3',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+    },
+
 ]

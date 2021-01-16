@@ -602,6 +602,7 @@ body {
         display: grid;
         grid-auto-columns: 100%;
         grid-auto-flow: column;
+        align-items: start;
         padding-top: 40px;
         margin: 0 30px;
         overflow: hidden;
@@ -677,21 +678,34 @@ body {
         cursor: pointer;
     }
 
+    .one-offer__image-wrap {
+        height: 120px;
+    }
+
+    .one-good__image-wrap {
+        height: 205px;
+    }
+
     .one-good__image-wrap img, .one-offer__image-wrap img  {
         width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
     .one-good__name, .one-offer__name {
+        padding: 35px 0 25px;
+    }
+
+    .one-good__name a, .one-offer__name a {
         font-size: 16px;
         font-weight: 400;
         line-height: 1.2;
         color: #4673ab;
         text-decoration: underline #4673ab;
-        padding: 35px 0 25px;
         cursor: pointer;
     }
 
-    .one-good__name:hover, .one-offer__name:hover {
+    .one-good__name:hover a, .one-offer__name:hover a {
         color: var(--orange);
         text-decoration: underline var(--orange);
     }
@@ -729,7 +743,7 @@ body {
         padding: 20px 0 15px;
     }
 
-    .one-good__about, .one-offer__about {
+    .one-good__about a, .one-offer__about{
         font-size: 13px;
         color: #4673ab;
         text-decoration: underline #4673ab;
@@ -761,7 +775,14 @@ body {
 
     .deadline {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    }
+
+    .deadline .deadline__no-limit {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #337500;
+        text-align: center;
     }
 
     .deadline .deadline__time-measure {
@@ -922,7 +943,7 @@ body {
     .list-goods {
         display: grid;
         grid-auto-columns: auto;
-        grid-template-columns: repeat(3, calc(100% / 3));
+        grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
         justify-content: space-between;
     }
 
@@ -951,9 +972,11 @@ body {
     .right-now_slider {
         overflow: hidden;
         display: grid;
-        grid-template-columns: repeat(3, calc(100% / 3));
+        grid-auto-columns: 0;
+        grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
         grid-auto-flow: column;
         margin: 40px 30px 0;
+        justify-content: space-around;
     }
 
     .right-now_slider__product {
@@ -1640,11 +1663,11 @@ body {
 
     .list-goods {
         grid-auto-columns: auto;
-        grid-template-columns: repeat(4, minmax(25%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     }
 
     .right-now_slider {
-        grid-template-columns: repeat(4, calc(100% / 4));
+        grid-template-columns: repeat(auto-fit, calc(100% / 4));
     }
 
     .brand-block_slider {

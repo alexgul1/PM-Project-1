@@ -124,21 +124,10 @@
           <strong>Более 2000 товаров</strong> от 40+ производителей в одном магазине. <a href="#"><strong>Любые решения
           под ключ.</strong></a>
         </p>
-        <div class="banners-section" id="banners-section">
-<!--          <div class="banner">
-            <img src="images/banner.png" class="banner-img" alt="banner">
-            <a href="#" class="more-info-btn">Подробнее</a>
-          </div>
-          <div class="banner">
-            <img src="images/banner.png" class="banner-img" alt="banner">
-            <a href="#" class="more-info-btn">Подробнее</a>
-          </div>
-          <div class="banner">
-            <img src="images/banner.png" class="banner-img" alt="banner">
-            <a href="#" class="more-info-btn">Подробнее</a>
-          </div>-->
-          <span class="prev-arrow"></span>
-          <span class="next-arrow"></span>
+        <div class="banners-section">
+          <div id="banners-section"></div>
+          <span class="prev-arrow" data-slide="prev" data-target="#banners-section" role="button"></span>
+          <span class="next-arrow" data-slide="next" data-target="#banners-section" role="button"></span>
           <ul class="banner_dots"></ul>
         </div>
       </div>
@@ -156,14 +145,14 @@
             Все новинки
           </a>
           <div class="arrow-btn">
-            <span class="arrow prev"></span>
-            <span class="arrow next"></span>
+            <span class="arrow prev" data-slide="prev" data-target="#new-products" role="button"></span>
+            <span class="arrow next" data-slide="next" data-target="#new-products" role="button"></span>
           </div>
         </div>
       </div>
       <div class="list-goods" id="new-products"></div>
-      <i class="arrow prev"></i>
-      <i class="arrow next"></i>
+      <i class="arrow prev" data-slide="prev" data-target="#new-products" role="button"></i>
+      <i class="arrow next" data-slide="next" data-target="#new-products" role="button"></i>
     </div>
     <div class="goods slider"  id="top-block">
       <div class="section-header">
@@ -177,14 +166,14 @@
             Все рекомендации
           </a>
           <div class="arrow-btn">
-            <span class="arrow prev"></span>
-            <span class="arrow next"></span>
+            <span class="arrow prev" data-slide="prev" data-target="#top-products" role="button"></span>
+            <span class="arrow next" data-slide="next" data-target="#top-products" role="button"></span>
           </div>
         </div>
       </div>
       <div class="list-goods" id="top-products"></div>
-      <i class="arrow prev"></i>
-      <i class="arrow next"></i>
+      <i class="arrow prev" data-slide="prev" data-target="#top-products" role="button"></i>
+      <i class="arrow next" data-slide="next" data-target="#top-products" role="button"></i>
     </div>
     <div class="goods slider" id="sale-block">
       <div class="section-header">
@@ -198,14 +187,14 @@
             Все товары
           </a>
           <div class="arrow-btn">
-            <span class="arrow prev"></span>
-            <span class="arrow next"></span>
+            <span class="arrow prev" data-slide="prev" data-target="#sale-products" role="button"></span>
+            <span class="arrow next" data-slide="next" data-target="#sale-products" role="button"></span>
           </div>
         </div>
       </div>
       <div class="list-goods" id="sale-products"></div>
-      <i class="arrow prev"></i>
-      <i class="arrow next"></i>
+      <i class="arrow prev" data-slide="prev" data-target="#sale-products" role="button"></i>
+      <i class="arrow next" data-slide="next" data-target="#sale-products" role="button"></i>
     </div>
     <div class="goods slider" id="offers-block">
       <div class="section-header">
@@ -219,14 +208,14 @@
             Все акции
           </a>
           <div class="arrow-btn">
-            <span class="arrow prev"></span>
-            <span class="arrow next"></span>
+            <span class="arrow prev" data-slide="prev" data-target="#offers" role="button"></span>
+            <span class="arrow next" data-slide="next" data-target="#offers" role="button"></span>
           </div>
         </div>
       </div>
       <div class="list-goods" id="offers"></div>
-      <i class="arrow prev"></i>
-      <i class="arrow next"></i>
+      <i class="arrow prev" data-slide="prev" data-target="#offers" role="button"></i>
+      <i class="arrow next" data-slide="next" data-target="#offers" role="button"></i>
     </div>
 
     <div class="right-now-block">
@@ -645,6 +634,7 @@
 <script src="js/bannerComponent.js"></script>
 <script src="js/productsComponent.js"></script>
 <script src="js/offersComponent.js"></script>
+<script src="js/sliders.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

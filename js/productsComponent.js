@@ -1,3 +1,10 @@
+let newBlock = document.querySelector('#new-block');
+let topBlock = document.querySelector('#top-block');
+let saleBlock = document.querySelector('#sale-block');
+const newProducts = document.querySelector("#new-products");
+const topProducts = document.querySelector('#top-products');
+const saleProducts = document.querySelector("#sale-products");
+
 const renderOneProduct = (productObj, label) => {
   let priceButtonPlace = "";
 
@@ -29,7 +36,8 @@ const renderOneProduct = (productObj, label) => {
 
 const renderNewProducts = () => {
   if (!newProductsList.length) {
-    document.querySelector('#new-block').remove();
+    newBlock.remove();
+    newBlock = null;
     return;
   }
 
@@ -37,14 +45,13 @@ const renderNewProducts = () => {
     newProductsList.splice(12);
   }
 
-  const newProducts = document.querySelector("#new-products");
-
   newProducts.innerHTML = newProductsList.reduce((accum, product) => accum + renderOneProduct(product, "new-label"), "");
 }
 
 const renderTopProducts = () => {
   if (!recommendedProductsList.length) {
-    document.querySelector('#top-block').remove();
+    topBlock.remove();
+    topBlock = null;
     return;
   }
 
@@ -52,22 +59,19 @@ const renderTopProducts = () => {
     recommendedProductsList.splice(12);
   }
 
-  const topProducts = document.querySelector('#top-products');
-
   topProducts.innerHTML = recommendedProductsList.reduce((accum, product) => accum + renderOneProduct(product, "top-label"), "");
 }
 
 const renderSaleProducts = () => {
   if (!saleProductsList.length) {
-    document.querySelector('#sale-block').remove();
+    saleBlock.remove();
+    saleBlock = null;
     return;
   }
 
   if (saleProductsList.length > 12) {
     saleProductsList.splice(12);
   }
-
-  const saleProducts = document.querySelector("#sale-products");
 
   saleProducts.innerHTML = saleProductsList.reduce((accum, product) => accum + renderOneProduct(product, "sale-label"), "");
 }

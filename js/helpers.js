@@ -30,3 +30,52 @@ const filterProductsLists = () => {
       return (+product1.price - (+product1.oldPrice || 0)) - (+product2.price - (+product2.oldPrice || 0));
     });
 }
+
+const checkProductsCount = () => {
+  const screenWidth = window.innerWidth;
+
+  const temp = numberOfDisplayedGoods;
+
+  if (screenWidth < 750) {
+    numberOfDisplayedGoods = 1;
+  } else if (screenWidth < 980) {
+    numberOfDisplayedGoods = 3;
+  } else {
+    numberOfDisplayedGoods = 4;
+  }
+
+  if (temp === numberOfDisplayedGoods) return;
+
+  if(newBlock) {
+    changeArrowsVisibility(newBlock, newProducts);
+    slideToggle({target: "#" + newProducts.id}, numberOfDisplayedGoods);
+  }
+
+  if (topBlock) {
+    changeArrowsVisibility(topBlock, topProducts);
+    slideToggle({target: "#" + topProducts.id}, numberOfDisplayedGoods);
+  }
+
+  if (saleBlock) {
+    changeArrowsVisibility(saleBlock, saleProducts);
+    slideToggle({target: "#" + saleProducts.id}, numberOfDisplayedGoods);
+  }
+
+  if(offerBlock) {
+    changeArrowsVisibility(offerBlock, offers);
+    slideToggle({target: "#" + offers.id}, numberOfDisplayedGoods);
+  }
+}
+
+const changeArrowsVisibility = (block, productsList) => {
+  const arrows = block.querySelectorAll(".arrow");
+  if (productsList.childElementCount > numberOfDisplayedGoods) {
+    for (const arrow of arrows) {
+      arrow.style.display = "inline-block";
+    }
+  } else {
+    for (const arrow of arrows) {
+      arrow.style.display = "none";
+    }
+  }
+}

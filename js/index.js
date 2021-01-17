@@ -39,15 +39,18 @@
     renderSaleProducts();
     renderOffers();
     renderRightNowProducts();
+    checkProductsCount();
+    autoBannerToggle();
   }
 
   document.addEventListener('DOMContentLoaded', init);
 
   document.querySelector('.burger').addEventListener('click', toggleBurgerMenu);
   document.addEventListener('click', purchaseHandler);
-  document.addEventListener("click", event => {
-    if(event.target.dataset.target) {
-      console.log(event.target.dataset.target)
-    }
-  })
+
+  document.addEventListener('click', sliderHandler);
+  document.addEventListener('click', dotsHandler);
+  document.querySelector('.banners-section').addEventListener('mouseenter',() => clearInterval(autoCycle));
+  document.querySelector('.banners-section').addEventListener('mouseleave', autoBannerToggle);
+  window.addEventListener('resize', checkProductsCount);
 })(window.document)

@@ -14,7 +14,10 @@ const renderBanners = () => {
 
 const renderBannerDots = () => {
   const dotsList = document.querySelector('.banner_dots');
+  
+  dotsList.innerHTML = BANNER.reduce((accum, _, index) => {
+    return accum + `<li data-slide-to="${index}" data-target="#banners-section" role="button"></li>`
+  }, "");
 
-  dotsList.innerHTML = '<li></li>'.repeat(BANNER.length);
   dotsList.firstElementChild.classList.add('active');
 }

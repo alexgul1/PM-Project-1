@@ -1,3 +1,6 @@
+let offerBlock = document.querySelector("#offers-block");
+const offers = document.querySelector("#offers");
+
 const renderTimerBlock = (num, title) => {
   return `<div class="deadline__time-measure">
               <div class="deadline__numbers">
@@ -38,15 +41,14 @@ const renderOneOffer = (offer) => {
 
 const renderOffers = () => {
   if (!PROMOTIONS.length) {
-    document.querySelector("#offers-block").remove();
+    offerBlock.remove();
+    offerBlock = null;
     return;
   }
 
   if (PROMOTIONS.length > 12) {
     PROMOTIONS.splice(12);
   }
-
-  const offers = document.querySelector("#offers");
 
   offers.innerHTML = PROMOTIONS.reduce((accum, offer) => accum + renderOneOffer(offer), "");
 }

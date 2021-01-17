@@ -24,14 +24,14 @@ const renderTopMenu = () => {
 }
 
 const renderMenu = () => {
-  const menu = document.querySelector('.categories');
+  const menu = document.querySelector('#categories');
   if(MENU.length > 10) {
-    menu.innerHTML = `<div class="category-arrow_left"><span>&lt;</span></div>`
+    menu.innerHTML = `<div class="category-arrow_left" data-slide="prev" data-target="#categories" role="button">&lt;</div>`
   }
 
   menu.innerHTML += MENU.reduce((accum, menuItem) => accum + `<a href="${menuItem.url}" class="category">${menuItem.title}</a>`, "")
 
   if(MENU.length > 10) {
-    menu.innerHTML += `<div class="category-arrow_right" data-target="#categoies"><span>&gt;</span></div>`
+    menu.innerHTML += `<div class="category-arrow_right" data-slide="next" data-target="#categories" role="button">&gt;</div>`
   }
 }

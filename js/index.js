@@ -31,6 +31,7 @@
     fillBasketInfo();
     renderMenu();
     renderNews();
+    renderBanners();
     checkCurrencyOfProduct();
     filterProductsLists();
     renderNewProducts();

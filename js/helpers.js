@@ -8,7 +8,7 @@ const randomNumber = (max) => Math.floor(Math.random() * (max + 1));
 
 const checkCurrencyOfProduct = () => {
   ITEMS.forEach((product) => {
-    if (product.currency !== CURRENCY) {
+    if (product.currency !== CURRENCY && product.hasOwnProperty("price")) {
       product.price = Math.floor(+product.price * CURRENCY_EXCHANGE[product.currency]) + "";
       if (product.hasOwnProperty("oldPrice")) {
         product.oldPrice = Math.floor(+product.oldPrice * CURRENCY_EXCHANGE[product.currency]) + "";

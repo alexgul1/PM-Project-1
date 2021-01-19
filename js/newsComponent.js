@@ -19,6 +19,8 @@ const renderNews = () => {
     }
   }
 
+  filteredNews.sort((a, b) => new Date(b.date) - new Date(a.date));
+
   newsList.innerHTML = filteredNews.reduce((accum, newsObj) => accum + renderOneNews(newsObj), "");
 }
 

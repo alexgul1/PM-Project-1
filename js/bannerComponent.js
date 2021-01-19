@@ -1,7 +1,8 @@
 const renderBanners = () => {
   const banners = document.querySelector("#banners-section");
+  BANNER.sort((a, b) => a.order - b.order);
 
-  banners.innerHTML +=  BANNER.reduce((accum, banner) => {
+  banners.innerHTML = BANNER.reduce((accum, banner) => {
     return accum +
       `<div class="banner">
         <img src="${banner.img}" alt="banner" class="banner-img" onerror="this.src='images/no-banner-image.png'">

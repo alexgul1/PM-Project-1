@@ -23,7 +23,7 @@ const filterProductsLists = () => {
     .sort((product1, product2) => new Date(product2.date) - new Date(product1.date));
 
   recommendedProductsList = ITEMS.filter(({type}) => type === "recommended")
-    .sort((product1, product2) => +product1.price - +product2.price);
+    .sort((product1, product2) => (+product1.price || Infinity) - (+product2.price || Infinity));
 
   saleProductsList = ITEMS.filter(({type}) => type === "sale")
     .sort((product1, product2) => {

@@ -35,6 +35,7 @@ const menuSlideToggle = (dataSet, displayedItems) => {
 
   if (indicesList[dataSet.target] + displayedItems >= children.length) {
     nextArrow.style.display = "none";
+    indicesList[dataSet.target] = children.length - displayedItems;
   } else if (nextArrow.style.display === "none") {
     nextArrow.style.display = "block";
   }
@@ -52,7 +53,7 @@ const menuSlideToggle = (dataSet, displayedItems) => {
 
   for (let i = 0; i < displayedItems; i++) {
     if (children[indicesList[dataSet.target] + i]) {
-      children[indicesList[dataSet.target] + i].style.display = "block";
+      children[indicesList[dataSet.target] + i].style.display = "flex";
     }
   }
 }

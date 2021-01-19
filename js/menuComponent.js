@@ -1,30 +1,33 @@
+const renderOneItemTopMenu = (item) => {
+  if(!item.hasOwnProperty("submenu")) {
+    return `<a class="menu-item" href="${item.url}">${item.title}</a>`
+  }
+
+  item.submenu.sort((a, b) => a.order - b.order);
+
+  const subMenu = item.submenu.reduce((accum, obj) => {
+    return accum + `<a class="sub-menu_item" href="${obj.url}">${obj.title}</a>`
+  }, "");
+
+  return `<div class="sub-menu">
+            <a class="menu-item">${item.title}</a>
+            <div class="sub-menu_items">${subMenu}</div>
+          </div>`;
+}
+
 const renderTopMenu = () => {
   const topMenu = document.querySelector('.menu-items');
-  let count = 0;
-  for (let key of Object.keys(TOP_MENU)) {
-    if (count >= 9) return;
 
-    const menuItem = TOP_MENU[key];
+  const topMenuList = Object.values(TOP_MENU).sort((a, b) => a.order - b.order);
+  topMenuList.splice(9);
 
-    if (menuItem.hasOwnProperty("submenu")) {
-      const subMenu = menuItem.submenu.reduce((accum, obj) => {
-        return accum + `<a class="sub-menu_item" href="${obj.url}">${obj.title}</a>`
-      }, "");
-
-      topMenu.innerHTML += `<div class="sub-menu">
-                                <a class="menu-item">${menuItem.title}</a>
-                                <div class="sub-menu_items">${subMenu}</div>
-                              </div>`;
-
-    } else {
-      topMenu.innerHTML += `<a class="menu-item" href="${menuItem.url}">${menuItem.title}</a>`
-    }
-    count++;
-  }
+  topMenu.innerHTML = topMenuList.reduce((accum, item) => accum + renderOneItemTopMenu(item), "");
 }
 
 const renderMenu = () => {
   const menu = document.querySelector('#categories');
+  MENU.sort((a, b) => a.order - b.order);
+
   if(MENU.length > 10) {
     menu.innerHTML = `<div class="category-arrow_left" data-slide="prev" data-target="#categories" role="button">&lt;</div>`
   }
@@ -33,5 +36,7 @@ const renderMenu = () => {
 
   if(MENU.length > 10) {
     menu.innerHTML += `<div class="category-arrow_right" data-slide="next" data-target="#categories" role="button">&gt;</div>`
+  } else {
+    menu.classList.add("no-arrows")
   }
 }

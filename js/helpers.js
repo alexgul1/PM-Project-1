@@ -79,3 +79,37 @@ const changeArrowsVisibility = (block, productsList) => {
     }
   }
 }
+
+const checkBrandsCount = () => {
+  const screenWidth = window.innerWidth;
+
+  const temp = numberOfDisplayedBrands;
+
+  if(screenWidth < 980) {
+    numberOfDisplayedBrands = 5;
+  } else if (screenWidth < 1140){
+    numberOfDisplayedBrands = 7;
+  } else {
+    numberOfDisplayedBrands = 9;
+  }
+
+  if(temp === numberOfDisplayedBrands) return;
+
+  slideToggle({target: "#brand-slider"}, numberOfDisplayedBrands);
+}
+
+const checkStatsCount = () => {
+  const screenWidth = window.innerWidth;
+
+  const temp = numberOfDisplayedStats;
+
+  if(screenWidth < 980) {
+    numberOfDisplayedStats = 4;
+  } else {
+    numberOfDisplayedStats = 6;
+  }
+
+  if(temp === numberOfDisplayedStats) return;
+
+  slideToggle({target: "#statistics-slider"}, numberOfDisplayedStats);
+}

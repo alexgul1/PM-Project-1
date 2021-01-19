@@ -38,6 +38,8 @@ const init = () => {
   renderOffers();
   renderRightNowProducts();
   checkProductsCount();
+  checkBrandsCount();
+  checkStatsCount();
   autoBannerToggle();
 }
 
@@ -51,4 +53,7 @@ document.addEventListener('click', dotsHandler);
 document.querySelector('.banners-section').addEventListener('mouseenter', () => clearInterval(autoCycle));
 document.querySelector('.banners-section').addEventListener('mouseleave', autoBannerToggle);
 window.addEventListener('resize', checkProductsCount);
+window.addEventListener('resize', checkBrandsCount);
+window.addEventListener('resize', checkStatsCount);
+
 

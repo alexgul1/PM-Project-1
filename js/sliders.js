@@ -1,5 +1,7 @@
 const indicesList = {};
 let numberOfDisplayedGoods;
+let numberOfDisplayedBrands;
+let numberOfDisplayedStats;
 let autoCycle;
 
 const sliderHandler = (event) => {
@@ -18,12 +20,21 @@ const sliderHandler = (event) => {
     indicesList[dataSet.target]++;
   }
 
-  if (dataSet.target === "#banners-section") {
-    bannerSlideToggle(dataSet);
-  } else if (dataSet.target === "#categories") {
-    menuSlideToggle(dataSet, 10);
-  } else {
-    slideToggle(dataSet, numberOfDisplayedGoods);
+  switch (dataSet.target) {
+    case "#banners-section" :
+      bannerSlideToggle(dataSet);
+      return;
+    case "#categories" :
+      menuSlideToggle(dataSet, 10);
+      return;
+    case "#brand-slider" :
+      slideToggle(dataSet, numberOfDisplayedBrands);
+      return;
+    case "#statistics-slider":
+      slideToggle(dataSet, numberOfDisplayedStats);
+      return;
+    default:
+      slideToggle(dataSet, numberOfDisplayedGoods);
   }
 
 }

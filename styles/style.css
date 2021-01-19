@@ -1046,6 +1046,8 @@ body {
 
     .brand-block_slider img {
         width: 85%;
+        height: 90px;
+        object-fit: contain;
     }
 
     .our-strengths-block {
@@ -1269,11 +1271,11 @@ body {
         line-height: 1.3;
     }
 
-    .statistics-block_stat:nth-child(odd) .statistics-block__digits {
+    .stat-block:nth-child(odd) .statistics-block__digits {
         color: var(--orange);
     }
 
-    .statistics-block_stat:nth-child(even) .statistics-block__digits {
+    .stat-block:nth-child(even) div .statistics-block__digits {
         color: #394a5c;
     }
 

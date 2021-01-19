@@ -116,7 +116,7 @@ const slideToggle = (dataSet, displayedItems) => {
     indicesList[dataSet.target] = 0;
   }
 
-  if (indicesList[dataSet.target] + displayedItems > children.length) {
+  if (indicesList[dataSet.target] + displayedItems >= children.length) {
     for(const arrow of nextArrows) {
       arrow.style.cursor = "default";
     }

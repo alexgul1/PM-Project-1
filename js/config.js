@@ -269,11 +269,205 @@ const BANNER = [
 ];
 
 // type ['new', 'recommended', 'sale']
+// new items - 14, recommended - 10, sale - 4
 const ITEMS = [
   {
     type: 'new',
-    description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
+    description: 'IP телефон Siemens Gigaset C530A IP №9',
+    img: 'images/product-1.png',
+    price: '5000',
+    currency: 'UAH',
+    date: '2020/02/01',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №10',
+    img: 'images/product-2.png',
+    price: '600',
+    currency: 'USD',
+    date: '2020/03/02',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №11',
+    img: 'images/product-3.png',
+    price: '2700',
+    currency: 'RUB',
+    date: '2020/04/03',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №12',
+    img: 'images/product-4.png',
+    price: '2400',
+    currency: 'UAH',
+    date: '2021/05/04',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №13',
+    img: 'images/product-3.png',
+    price: '3700',
+    currency: 'RUB',
+    date: '2020/06/03',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №14',
+    img: 'images/product-4.png',
+    price: '1500',
+    currency: 'UAH',
+    date: '2021/07/04',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №5',
+    img: 'images/product-1.png',
+    price: '2000',
+    oldPrice: '2200',
+    currency: 'UAH',
+    date: '2020/01/01',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №6',
+    img: 'images/product-2.png',
+    price: '800',
+    oldPrice: '1100',
+    currency: 'USD',
+    date: '2020/01/02',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №7',
+    img: 'images/product-3.png',
+    price: '1300',
+    oldPrice: '1900',
+    currency: 'RUB',
+    date: '2020/01/03',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №8',
+    img: 'images/product-4.png',
+    price: '2000',
+    oldPrice: '4000',
+    currency: 'UAH',
+    date: '2021/01/04',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №1',
+    img: 'images/product-1.png',
+    price: '1000',
+    oldPrice: '1100',
+    currency: 'UAH',
+    date: '2021/01/01',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №2',
+    img: 'images/product-2.png',
+    price: '1000',
+    oldPrice: '1100',
+    currency: 'USD',
+    date: '2021/01/02',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №3',
+    img: 'images/product-3.png',
+    price: '1000',
+    oldPrice: '1100',
+    currency: 'RUB',
+    date: '2021/01/03',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'new',
+    description: 'IP телефон Siemens Gigaset C530A IP №4',
+    img: 'images/product-4.png',
+    price: '10000',
+    oldPrice: '11000',
+    currency: 'UAH',
+    date: '2021/01/04',
+    url: 'new_items/item1.html'
+  },
+
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №9',
+    img: 'images/product-1.png',
+    price: '5000',
+    currency: 'UAH',
+    date: '2020/02/01',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №10',
+    img: 'images/product-2.png',
+    price: '600',
+    currency: 'USD',
+    date: '2020/03/02',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №5',
+    img: 'images/product-1.png',
+    price: '2000',
+    oldPrice: '2200',
+    currency: 'UAH',
+    date: '2020/01/01',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №6',
+    img: 'images/product-2.png',
+    price: '800',
+    oldPrice: '1100',
+    currency: 'USD',
+    date: '2020/01/02',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №7',
+    img: 'images/product-3.png',
+    price: '1300',
+    oldPrice: '1900',
+    currency: 'RUB',
+    date: '2020/01/03',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №8',
+    img: 'images/product-4.png',
+    price: '2000',
+    oldPrice: '4000',
+    currency: 'UAH',
+    date: '2021/01/04',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №1',
+    img: 'images/product-1.png',
     price: '1000',
     oldPrice: '1100',
     currency: 'UAH',
@@ -282,23 +476,74 @@ const ITEMS = [
   },
   {
     type: 'recommended',
-    description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
-    price: '300',
+    description: 'IP телефон Siemens Gigaset C530A IP №2',
+    img: 'images/product-2.png',
+    price: '1000',
+    oldPrice: '1100',
+    currency: 'USD',
+    date: '2021/01/02',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №3',
+    img: 'images/product-3.png',
+    price: '1000',
     oldPrice: '1100',
     currency: 'RUB',
-    date: '2020/12/25',
-    url: 'new_items/item.html'
+    date: '2021/01/03',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'recommended',
+    description: 'IP телефон Siemens Gigaset C530A IP №4',
+    img: 'images/product-4.png',
+    price: '10000',
+    oldPrice: '11000',
+    currency: 'UAH',
+    date: '2021/01/04',
+    url: 'new_items/item1.html'
+  },
+
+  {
+    type: 'sale',
+    description: 'IP телефон Siemens Gigaset C530A IP №1',
+    img: 'images/product-1.png',
+    price: '1000',
+    oldPrice: '1100',
+    currency: 'UAH',
+    date: '2021/01/01',
+    url: 'new_items/item1.html'
   },
   {
     type: 'sale',
-    description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
-    price: '150',
-    oldPrice: '200',
+    description: 'IP телефон Siemens Gigaset C530A IP №2',
+    img: 'images/product-2.png',
+    price: '1000',
+    oldPrice: '1100',
     currency: 'USD',
-    date: '2021/01/13',
-    url: 'https://same_url/item.html'
+    date: '2021/01/02',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'sale',
+    description: 'IP телефон Siemens Gigaset C530A IP №3',
+    img: 'images/product-3.png',
+    price: '1000',
+    oldPrice: '1100',
+    currency: 'RUB',
+    date: '2021/01/03',
+    url: 'new_items/item1.html'
+  },
+  {
+    type: 'sale',
+    description: 'IP телефон Siemens Gigaset C530A IP №4',
+    img: 'images/product-4.png',
+    price: '10000',
+    oldPrice: '11000',
+    currency: 'UAH',
+    date: '2021/01/04',
+    url: 'new_items/item1.html'
   },
 ];
 
@@ -306,28 +551,75 @@ const ITEMS = [
 const PROMOTIONS = [
   {
     title: 'Название акции',
-    description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
+    description: 'Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.',
+    img: 'images/offer-1.png',
     url: 'https://same_url/item.html',
     time_action: '1d 2h 20m'
   },
   {
     title: 'Название акции 2',
-    description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
+    description: 'Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.',
+    img: 'images/offer-2.png',
+    url: 'https://same_url/item.html',
+  },
+  {
+    title: 'Название акции 3',
+    description: 'Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.',
+    img: 'images/offer-3.png',
+    url: 'https://same_url/item.html',
+    time_action: '0d 20h 20m'
+  },
+  {
+    title: 'Название акции 4',
+    description: 'Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.',
+    img: 'images/offer-4.png',
+    url: 'https://same_url/item.html',
+    time_action: '20d 0h 20m'
+  },
+  {
+    title: 'Название акции 5',
+    description: 'Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.',
+    img: 'images/offer-1.png',
+    url: 'https://same_url/item.html',
+    time_action: '3d 2h 0m'
+  },
+  {
+    title: 'Название акции 6',
+    description: 'Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.',
+    img: 'https://broken-link.html',
     url: 'https://same_url/item.html',
   }
 ];
 
 const BUYING_RIGHT_NOW = [
   {
-    title: 'Название товара',
-    img: 'https://same_url.jpg',
+    title: 'IP телефон Siemens Gigaset C530A IP №1',
+    img: 'images/product-1.png',
     url: 'https://same_url/item.html',
   },
   {
-    title: 'Название товара 2',
-    img: 'https://same_url.jpg',
+    title: 'IP телефон Siemens Gigaset C530A IP №2',
+    img: 'images/product-2.png',
+    url: 'https://same_url/item.html',
+  },
+  {
+    title: 'IP телефон Siemens Gigaset C530A IP №3',
+    img: 'images/product-3.png',
+    url: 'https://same_url/item.html',
+  },
+  {
+    title: 'IP телефон Siemens Gigaset C530A IP №4',
+    img: 'images/product-4.png',
+    url: 'https://same_url/item.html',
+  },
+  {
+    title: 'IP телефон Siemens Gigaset C530A IP №5',
+    img: 'images/product-1.png',
+    url: 'https://same_url/item.html',
+  },
+  {
+    title: 'IP телефон Siemens Gigaset C530A IP №6',
+    img: 'images/product-2.png',
     url: 'https://same_url/item.html',
   },
 ]
